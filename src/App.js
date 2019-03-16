@@ -58,7 +58,7 @@ class App extends Component {
   }
 
   render() {
-    const { salary: { text }, rate, months, veteran, bonus } = this.state
+    const { salary: { text }, rate, veteran, bonus } = this.state
     return (
       <div className="App">
         <header className="App-header">
