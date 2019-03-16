@@ -120,7 +120,7 @@ class App extends Component {
             <div className="row">
               <select name="role" className="input input-select">
                 <option value={1.4}>Analista</option>
-                <option value={1.6}>Especialista</option>
+                <option value={1.4}>Especialista</option>
                 <option value={2}>Cordenador</option>
                 <option value={2.4}>Gerente</option>
               </select>
