@@ -1,33 +1,91 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400,700');
+
+label {
+  text-align: left;
+  font-size: 14px;
+  padding: 0 0 7px 5px;
+}
+
+form {
+  width: 400px;
+  max-width: 100%;
+}
+
+button {
+  -webkit-transition-duration: 0.4s; /* Safari */
+  transition-duration: 0.4s;
+  border: 0px;
+  appearance: none;
+  background-color: #ff4800;
+  border: 1px solid #fff;
+  color: #fff;
+  padding: 15px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+button:hover{
+  background-color: #fff;
+  color: #ff4800;
+  border: 1px solid #ff4800;
+}
+
 .App {
   text-align: center;
+  font-family: 'Open Sans', sans-serif;
+  font-size: calc(2px + 2vmin);
+  color: #ff4800;
 }
 
 .App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 40vmin;
-  pointer-events: none;
+  background: url(https://www.nextel.com.br/css/geral/img/logo_header.svg) left top no-repeat;
+  height: 50px;
+  width: 125px;
+  background-size: 100%;
+  z-index: 1;
 }
 
 .App-header {
-  background-color: #282c34;
+  background-color: #fff;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
 .App-link {
   color: #61dafb;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.row{
+  display: flex;
+  flex-direction: column;
+  padding: 20px 0;
+  position: relative;
+}
+
+.input {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 18px;  
+  outline: 0;
+  padding: 15px;
+}
+
+.input-salary{
+  padding-left: 35px;
+}
+
+.input-select{
+  border-radius: 0px;
+  -webkit-appearance: none;
+  appearance: none;
+  background: white;
+  border: solid 1px #ddd;
+}
+
+.currency{
+  position: absolute;
+  padding-top: 45px;
+  padding-left: 15px;
 }
