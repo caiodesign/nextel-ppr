@@ -11,6 +11,17 @@ form {
   max-width: 100%;
 }
 
+ul {
+  list-style: none;
+  text-align: left;
+  font-size: 12px;
+  margin-left: 0px;
+  padding-left: 0px;
+  color: #000;
+  width: 400px;
+  max-width: 100%;
+}
+
 button {
   -webkit-transition-duration: 0.4s; /* Safari */
   transition-duration: 0.4s;
@@ -89,4 +100,12 @@ button:hover{
   position: absolute;
   padding-top: 45px;
   padding-left: 15px;
+}
+
+.text-bold{
+  font-weight: bold;
+}
+
+.text-bold span{
+  font-weight: 400;
 }
