@@ -33,14 +33,18 @@ class App extends Component {
   }
 
   updateSalary = ({ formattedValue: text , value }) => {
-    this.setState({ 
-      salary: {
-        total: value && JSON.parse(value),
-        text,
-      }
-    })
+    let total = value
 
-    return value
+    try{
+      total = JSON.parse(value)
+      this.setState({ salary: { total, text } })
+
+      return total
+    } catch {
+      this.setState({ salary: { text: '' } })
+    }
+
+    return total
   }
 
   getRatePercent = (rate) => `${(rate * 100).toFixed(0)}%`
@@ -49,7 +53,6 @@ class App extends Component {
     event.preventDefault()
     const { salary: { total: salary }, months, rate, role } = this.state
     let userPpr
-    console.log(salary)
 
     if(salary){
       userPpr = Calculator({
@@ -136,7 +139,7 @@ class App extends Component {
 
             <button type="submit">Calcular</button>
           </form>
-          <p>{bonus ? bonusTotal : 'R$ 0'}</p>
+          <p>{(bonus && !error) ? bonusTotal : '-'}</p>
           <ul>
             <p className="text-bold">Observações:</p>
             <li>Já aplicado o desconto de <span className="text-bold">3%</span> não obrigatório do sindicato.</li>
