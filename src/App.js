@@ -71,7 +71,7 @@ class App extends Component {
 
   render() {
     const { salary: { text }, rate, veteran, bonus, error } = this.state
-    const bonusTotal = `R$ ${(bonus - sindicateCalculator(bonus))}`
+    const bonusTotal = `R$ ${(bonus - sindicateCalculator(bonus)).toFixed(2)}`
     return (
       <div className="App">
         <header className="App-header">
