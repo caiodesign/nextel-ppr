@@ -1,12 +1,12 @@
 import React, { Component } from 'react'
-import Calculator from './utils/calculator'
+import Calculator, { sindicateCalculator } from './utils/calculator'
 import CurrencyFormat from 'react-currency-format';
 import './App.css'
 
 class App extends Component {
   state = {
     salary: {
-      total: 1000,
+      total: 0,
       text: 'R$'
     },
     veteran: true,
@@ -14,6 +14,7 @@ class App extends Component {
     rate: 0.7,
     role: 1.4,
     bonus: 0,
+    error: false,
   }
 
   updateState = ({ target }, parse) => {
@@ -47,28 +48,37 @@ class App extends Component {
   handleSubmit = (event) => {
     event.preventDefault()
     const { salary: { total: salary }, months, rate, role } = this.state
-    const userPpr = Calculator({
-      salary,
-      months,
-      rate,
-      role
-    }, (bonus) => this.setState({ bonus }))
+    let userPpr
+    console.log(salary)
 
-    return userPpr
+    if(salary){
+      userPpr = Calculator({
+        salary,
+        months,
+        rate,
+        role
+      }, (bonus) => this.setState({ bonus, error: false }))
+      return userPpr
+    }
+
+    this.setState({ error: true })
+
+    return false
   }
 
   render() {
-    const { salary: { text }, rate, veteran, bonus } = this.state
+    const { salary: { text }, rate, veteran, bonus, error } = this.state
+    const bonusTotal = `R$ ${(bonus - sindicateCalculator(bonus))}`
     return (
       <div className="App">
         <header className="App-header">
           <div className="App-logo"></div>
           <form style={{ display: 'flex', flexDirection: 'column'}} onSubmit={(event) => this.handleSubmit(event)}>
             <div className="row">
-              <label>Salário</label>
+              <label>*Salário <span className={`text-error ${error && 'active'}`}>(Obrigatório)</span></label>
               <label className="currency">R$ </label>
               <CurrencyFormat 
-                className="input input-salary"
+                className={`input input-salary ${error && 'input-error'}`}
                 displayType={'input'}
                 thousandSeparator
                 name="salary"
@@ -126,12 +136,13 @@ class App extends Component {
 
             <button type="submit">Calcular</button>
           </form>
-          <p>{bonus ? (`R$ ${bonus}`) : 'R$ 0'}</p>
+          <p>{bonus ? bonusTotal : 'R$ 0'}</p>
           <ul>
             <p className="text-bold">Observações:</p>
-            <li>Não aplicado o desconto não obrigatório do sindicato.</li>
+            <li>Já aplicado o desconto de 3% não obrigatório do sindicato.</li>
             <li>Valor total já descontado os <span className="text-bold">30%</span> da primeira parcela.</li>
-            <p className="text-bold">Entenda o cálculo:  <span>((salário x cargo) x porcentagem) - 30%</span></p>
+            <p className="text-bold">Entenda o cálculo:  <span>(((salário x cargo) x porcentagem) - 30%) - 3% sindicato</span></p>
+            <p className="text-bold">Descontado do sindicato: <span>{sindicateCalculator(bonus)} R$</span></p>
           </ul>
         </header>
       </div>

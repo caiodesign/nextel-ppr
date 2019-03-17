@@ -11,4 +11,13 @@ export const pprCalculator = ({ salary, months, role, rate }, cb) => {
     return bonus
 }
 
+export const sindicateCalculator = (value) =>  {
+    const result = (value * 0.97)
+    if((value - result) > 200){
+        return 200
+    }
+    
+    return (value - result).toFixed(2)
+}
+
 export default pprCalculator

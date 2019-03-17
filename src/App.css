@@ -12,7 +12,7 @@ label {
 }
 
 form {
-  width: 400px;
+  width: 420px;
   max-width: calc(100% - 30px);
 }
 
@@ -23,7 +23,7 @@ ul {
   margin-left: 0px;
   padding-left: 0px;
   color: #000;
-  width: 400px;
+  width: 420px;
   max-width: 100%;
 }
 
@@ -87,6 +87,8 @@ button:hover{
   font-size: 18px;  
   outline: 0;
   padding: 15px;
+  -webkit-transition-duration: 0.4s; /* Safari */
+  transition-duration: 0.4s;
 }
 
 .input-salary{
@@ -102,6 +104,10 @@ button:hover{
   border: solid 1px #ddd;
 }
 
+.input-error{
+  border: 1px solid red;
+}
+
 .currency{
   position: absolute;
   padding-top: 45px;
@@ -114,4 +120,16 @@ button:hover{
 
 .text-bold span{
   font-weight: 400;
+}
+
+.text-error {
+  -webkit-transition-duration: 0.4s; /* Safari */
+  transition-duration: 0.4s;
+  color: red;
+  font-weight: 400;
+  opacity: 0;
+}
+
+.text-error.active{
+  opacity: 1;
 }
