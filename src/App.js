@@ -129,7 +129,7 @@ class App extends Component {
           <p>{bonus ? (`R$ ${bonus}`) : 'R$ 0'}</p>
           <ul>
             <p className="text-bold">Observações:</p>
-            <li>Não aplicado os descontos do governo.</li>
+            <li>Não aplicado o desconto não obrigatório do sindicato.</li>
             <li>Valor total já descontado os <span className="text-bold">30%</span> da primeira parcela.</li>
             <p className="text-bold">Entenda o cálculo:  <span>((salário x cargo) x porcentagem) - 30%</span></p>
           </ul>
