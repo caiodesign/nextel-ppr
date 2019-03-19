@@ -20,7 +20,7 @@ ul {
   list-style: none;
   text-align: left;
   font-size: 12px;
-  margin-left: 0px;
+  margin: 0px;
   padding-left: 0px;
   color: #000;
   width: 420px;
@@ -50,7 +50,7 @@ button:hover{
 .App {
   text-align: center;
   font-family: 'Open Sans', sans-serif;
-  font-size: calc(2px + 2vmin);
+  font-size: 17px;
   color: #ff4800;
 }
 
@@ -86,7 +86,7 @@ button:hover{
   font-family: 'Open Sans', sans-serif;
   font-size: 18px;  
   outline: 0;
-  padding: 15px;
+  padding: 13px;
   -webkit-transition-duration: 0.4s; /* Safari */
   transition-duration: 0.4s;
 }

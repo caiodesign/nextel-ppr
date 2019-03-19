@@ -1,5 +1,5 @@
 export const pprCalculator = ({ salary, months, role, rate }, cb) => {
-    let bonus = (((salary * role) * rate) * 0.7).toFixed(2)
+    let bonus = (((salary * role) * rate) - (salary * 0.7)).toFixed(2)
     
     if(months) {
         const monthsInPercent = (months / 12)
