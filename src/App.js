@@ -144,7 +144,7 @@ class App extends Component {
             <p className="text-bold">Observações:</p>
             <li>Já aplicado o desconto de <span className="text-bold">3%</span> não obrigatório do sindicato.</li>
             <li>Valor total já descontado os <span className="text-bold">30%</span> da primeira parcela.</li>
-            <p className="text-bold">Entenda o cálculo:  <span>(((salário x cargo) x porcentagem) - 30%) - 3% sindicato</span></p>
+            <p className="text-bold">Entenda o cálculo:  <span>(((salário x cargo) x porcentagem) - (salario - 30%) - 3% sindicato</span></p>
             <p className="text-bold">Descontado do sindicato: <span>{sindicateCalculator(bonus)} R$</span></p>
           </ul>
         </header>
