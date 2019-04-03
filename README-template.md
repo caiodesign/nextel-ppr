@@ -1,10 +1,10 @@
-| Statements | Branches | Functions | Lines | Build Status |
-| -----------|----------|-----------|-------| ------------ |
-| ![Statements](#statements# "Make me better!") | ![Branches](#branches# "Make me better!") | ![Functions](#functions# "Make me better!") | ![Lines](#lines# "Make me better!") | ![BuildStatus](#buildstatus# "Building Status") |
-
 ![Demo](https://github.com/caiodesign/nextel-ppr/blob/master/demo/demo1.png?raw=true)
 
 [Demo Link](https://nextel-ppr-calculator.netlify.com/)
+
+| Statements | Branches | Functions | Lines | Build Status |
+| -----------|----------|-----------|-------| ------------ |
+| ![Statements](#statements# "Make me better!") | ![Branches](#branches# "Make me better!") | ![Functions](#functions# "Make me better!") | ![Lines](#lines# "Make me better!") | ![BuildStatus](#buildstatus# "Building Status") |
 
 ## Available Scripts
 

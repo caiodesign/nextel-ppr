@@ -1,10 +1,10 @@
-| Statements | Branches | Functions | Lines | Build Status |
-| -----------|----------|-----------|-------| ------------ |
-| ![Statements](https://img.shields.io/badge/Coverage-10.11%25-red.svg "Make me better!") | ![Branches](https://img.shields.io/badge/Coverage-10.71%25-red.svg "Make me better!") | ![Functions](https://img.shields.io/badge/Coverage-10.34%25-red.svg "Make me better!") | ![Lines](https://img.shields.io/badge/Coverage-10.34%25-red.svg "Make me better!") | ![BuildStatus](https://img.shields.io/badge/Build-Passing-brightgreen.svg "Building Status") |
-
 ![Demo](https://github.com/caiodesign/nextel-ppr/blob/master/demo/demo1.png?raw=true)
 
 [Demo Link](https://nextel-ppr-calculator.netlify.com/)
+
+| Statements | Branches | Functions | Lines | Build Status |
+| -----------|----------|-----------|-------| ------------ |
+| ![Statements](https://img.shields.io/badge/Coverage-10.11%25-red.svg "Make me better!") | ![Branches](https://img.shields.io/badge/Coverage-10.71%25-red.svg "Make me better!") | ![Functions](https://img.shields.io/badge/Coverage-10.34%25-red.svg "Make me better!") | ![Lines](https://img.shields.io/badge/Coverage-10.34%25-red.svg "Make me better!") | ![BuildStatus](https://img.shields.io/badge/Build-Passing-brightgreen.svg "Building Status") |
 
 ## Available Scripts
 
