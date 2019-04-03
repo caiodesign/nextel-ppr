@@ -133,7 +133,7 @@ class App extends Component {
             <div className="row">
               <select name="role" className="input input-select">
                 <option value={1.4}>Analista/Especialista</option>
-                <option value={2.6}>Cordenador</option>
+                <option value={2.6}>Coordenador</option>
               </select>
             </div>
 
@@ -145,7 +145,7 @@ class App extends Component {
             <li>Já aplicado o desconto de <span className="text-bold">3%</span> não obrigatório do sindicato.</li>
             <li>Valor total já descontado os <span className="text-bold">30%</span> da primeira parcela.</li>
             <p className="text-bold">Entenda o cálculo:  <span>(((salário x cargo) x porcentagem) - (salario - 30%) - 3% sindicato</span></p>
-            <p className="text-bold">Descontado do sindicato: <span>{sindicateCalculator(bonus)} R$</span></p>
+            <p className="text-bold">Descontado do sindicato: <span>R$ {sindicateCalculator(bonus)}</span></p>
           </ul>
         </header>
       </div>
