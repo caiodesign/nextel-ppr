@@ -4,7 +4,7 @@
 
 | Statements | Branches | Functions | Lines | Build Status |
 | -----------|----------|-----------|-------| ------------ |
-| ![Statements](https://img.shields.io/badge/Coverage-10.11%25-red.svg "Make me better!") | ![Branches](https://img.shields.io/badge/Coverage-10.71%25-red.svg "Make me better!") | ![Functions](https://img.shields.io/badge/Coverage-10.34%25-red.svg "Make me better!") | ![Lines](https://img.shields.io/badge/Coverage-10.34%25-red.svg "Make me better!") | ![BuildStatus](https://img.shields.io/badge/Build-Passing-brightgreen.svg "Building Status") |
+| ![Statements](#statements# "Make me better!") | ![Branches](#branches# "Make me better!") | ![Functions](#functions# "Make me better!") | ![Lines](#lines# "Make me better!") | ![BuildStatus](#buildstatus# "Building Status") |
 
 ## Available Scripts
 
