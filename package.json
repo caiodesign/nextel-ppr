@@ -10,8 +10,11 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
+    "prebuild": "echo nok > .buildstatus && npm run make-badges",
+    "postbuild": "echo ok > .buildstatus",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "make-badges": "npm run test -- --coverage && node_modules/.bin/jest-badges-readme"
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -22,7 +25,20 @@
     "not ie <= 11",
     "not op_mini all"
   ],
+  "jest": {
+    "coverageReporters": [
+      "json-summary",
+      "text",
+      "lcov"
+    ]
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "npm run test -- --coverage && node_modules/.bin/jest-badges-readme && git add 'README.md'"
+    }
+  },
   "devDependencies": {
+    "@olavoparno/jest-badges-readme": "^1.3.3",
     "react-currency-format": "^1.0.0"
   }
 }
