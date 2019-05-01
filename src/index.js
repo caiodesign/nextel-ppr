@@ -9,19 +9,11 @@ const docRoot = document.getElementById('root');
 
 const getScheme = (id) => {
   return (
-    id === 1 ?
-      { 
-        element: <App />, 
-        name: App.name
-      } :
-      { 
-        element: <Overtime />, 
-        name: Overtime.name 
-      }
+    id === 1 ? <App /> : <Overtime />
   );
 };
 
-const renderStuff = (component) => ReactDOM.render(component.element, docRoot);
+const renderStuff = (component) => ReactDOM.render(component, docRoot);
 
 const chooseWisely = () => 
   <React.Fragment>

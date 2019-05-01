@@ -72,6 +72,7 @@ class App extends Component {
 
     return (
       <div className="App">
+      <button className="button-entry" onClick={() => window.location.reload()}>Voltar</button>
         <header className="App-header">
           <div className="App-logo"></div>
           <form style={{ display: 'flex', flexDirection: 'column'}} onSubmit={(event) => this.handleSubmit(event)}>
