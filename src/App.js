@@ -1,7 +1,7 @@
-import React, { Component } from 'react'
-import Calculator, { sindicateCalculator } from './utils/calculator'
+import React, { Component } from 'react';
+import Calculator, { sindicateCalculator } from './utils/calculator';
 import CurrencyFormat from 'react-currency-format';
-import './App.css'
+import './App.css';
 
 class App extends Component {
   state = {
@@ -15,63 +15,65 @@ class App extends Component {
     role: 1.4,
     bonus: 0,
     error: false,
-  }
+  };
 
   updateState = ({ target }, parse) => {
-    let value = target.value
-    if(parse) value = value && JSON.parse(value)
-    this.setState({ [target.name]: value })
+    let value = target.value;
+    if (parse) value = value && JSON.parse(value);
+    this.setState({ [target.name]: value });
 
-    return value
+    return value;
   }
 
   updateRate = ({target: { value }}) => {
-    const inPercent = value && JSON.parse((value / 100))
-    this.setState({ rate: inPercent })
+    const inPercent = value && JSON.parse((value / 100));
+    this.setState({ rate: inPercent });
 
-    return inPercent
+    return inPercent;
   }
 
   updateSalary = ({ formattedValue: text , value }) => {
-    let total = value
+    let total = value;
 
-    try{
-      total = JSON.parse(value)
-      this.setState({ salary: { total, text } })
+    try {
+      total = JSON.parse(value);
+      this.setState({ salary: { total, text } });
 
-      return total
+      return total;
     } catch {
-      this.setState({ salary: { text: '' } })
-    }
+      this.setState({ salary: { text: '' } });
+    };
 
-    return total
-  }
+    return total;
+  };
 
-  getRatePercent = (rate) => `${(rate * 100).toFixed(0)}%`
+  getRatePercent = (rate) => `${(rate * 100).toFixed(0)}%`;
 
   handleSubmit = (event) => {
-    event.preventDefault()
-    const { salary: { total: salary }, months, rate, role } = this.state
-    let userPpr
+    event.preventDefault();
+    const { salary: { total: salary }, months, rate, role } = this.state;
+    let userPpr;
 
-    if(salary){
+    if (salary) {
       userPpr = Calculator({
         salary,
         months,
         rate,
         role
-      }, (bonus) => this.setState({ bonus, error: false }))
-      return userPpr
-    }
+      }, (bonus) => this.setState({ bonus, error: false }));
 
-    this.setState({ error: true })
+      return userPpr;
+    };
 
-    return false
+    this.setState({ error: true });
+
+    return false;
   }
 
   render() {
-    const { salary: { text }, rate, veteran, bonus, error } = this.state
-    const bonusTotal = `R$ ${(bonus - sindicateCalculator(bonus)).toFixed(2)}`
+    const { salary: { text }, rate, veteran, bonus, error } = this.state;
+    const bonusTotal = `R$ ${(bonus - sindicateCalculator(bonus)).toFixed(2)}`;
+
     return (
       <div className="App">
         <header className="App-header">
@@ -151,6 +153,6 @@ class App extends Component {
       </div>
     )
   }
-}
+};
 
-export default App
+export default App;

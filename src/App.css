@@ -1,8 +1,11 @@
 @import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400,700');
 
-body{
+body {
   padding-left: 30px;
   padding-right: 30px;
+  text-align: center;
+  height: 100vh;
+  margin: 25px;
 }
 
 label {
@@ -41,7 +44,7 @@ button {
   outline: none;
 }
 
-button:hover{
+button:hover {
   background-color: #fff;
   color: #ff4800;
   border: 1px solid #ff4800;
@@ -75,7 +78,7 @@ button:hover{
   color: #61dafb;
 }
 
-.row{
+.row {
   display: flex;
   flex-direction: column;
   padding: 20px 0;
@@ -91,12 +94,12 @@ button:hover{
   transition-duration: 0.4s;
 }
 
-.input-salary{
+.input-salary {
   padding-left: 35px;
   border: 1px solid #ddd;
 }
 
-.input-select{
+.input-select {
   border-radius: 0px;
   -webkit-appearance: none;
   appearance: none;
@@ -104,21 +107,21 @@ button:hover{
   border: solid 1px #ddd;
 }
 
-.input-error{
+.input-error {
   border: 1px solid red;
 }
 
-.currency{
+.currency {
   position: absolute;
   padding-top: 45px;
   padding-left: 15px;
 }
 
-.text-bold{
+.text-bold {
   font-weight: bold;
 }
 
-.text-bold span{
+.text-bold span { 
   font-weight: 400;
 }
 
@@ -130,6 +133,18 @@ button:hover{
   opacity: 0;
 }
 
-.text-error.active{
+.text-error.active {
   opacity: 1;
+}
+
+.button-entry {
+  top: 30%;
+  display: inline-block;
+  position: relative;
+  margin: 10px;
+  min-width: 176px;
+}
+
+.input-salary[type='normal'] {
+  padding-left: 13px;
 }
