@@ -126,7 +126,7 @@ class App extends Component {
             <li>O bonus de sobreaviso é em cima de <span className="text-bold">1/3</span> das horas trabalhadas.</li>
             <li>Caso trabalhe durante este período, além das horas ordinárias, ganha-se no mínimo <span className="text-bold">50%</span> a mais para cada hora.</li>
             <li>Trabalhando sob adicional noturno, adiciona-se mais <span className="text-bold">20%</span> para cada hora.</li>
-            <p className="text-bold">Entenda o cálculo:  <span>(((salário x cargo) x porcentagem) - (salario - 30%) - 3% sindicato</span></p>
+            <p className="text-bold">Entenda o cálculo:  <span>(((salárioHora / 3) x horasSobreAviso) + possíveisHorasExtras) (Sobre as horas extras incide o salárioHora ordinário)</span></p>
           </ul>
         </header>
       </div>

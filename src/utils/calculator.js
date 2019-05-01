@@ -27,11 +27,11 @@ export const overtimeCalculator = ({ salary, days, extraDayHours, extraNightHour
     let totalOvertimeBonus = ((baseSalaryPerHour / 3) * baseOvertimeHours)
 
     if (extraDayHours) {
-        totalOvertimeBonus = totalOvertimeBonus + ((baseSalaryPerHour * 2) * extraDayHours);
+        totalOvertimeBonus = totalOvertimeBonus + ((baseSalaryPerHour * 1.5) * extraDayHours);
     };
     
     if (extraNightHours) {
-        totalOvertimeBonus = totalOvertimeBonus + ((baseSalaryPerHour * 2.3) * extraNightHours);
+        totalOvertimeBonus = totalOvertimeBonus + ((baseSalaryPerHour * 2.2) * extraNightHours);
     };
 
     if (cb) return totalOvertimeBonus.toFixed(2);
@@ -41,7 +41,7 @@ export const overtimeCalculator = ({ salary, days, extraDayHours, extraNightHour
 
 export default pprCalculator;
 
-// http://www.sindpd.org.br/sindpd/upload/convencoes/CCT-2017-homologada.pdf
+//http://www.sinder.org.br/wp-content/uploads/2018/01/CCT-SINDER-SINTTEL-2017-2018-MR0678142017.pdf
 // O bonus de sobreaviso é em cima de 1/3 das horas trabalhadas.
-// Caso trabalhe durante este período, além das horas ordinárias, ganha-se no mínimo 75% a mais para cada hora.
-// Trabalhando sob adicional noturno, adiciona-se mais 30% para cada hora extra.
+// Caso trabalhe durante este período, além das horas ordinárias, ganha-se 50% a mais para cada hora.
+// Trabalhando sob adicional noturno, adiciona-se mais 20% para cada hora extra.
